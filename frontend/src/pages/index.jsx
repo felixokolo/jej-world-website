@@ -42,8 +42,19 @@ export default function Home() {
             <h2>Recent</h2>
             <Product images={images}></Product>
           </div>
-          <div className='login'>
+          <div className={styles.login}>
             <h2>Login</h2>
+            <form>
+              <div className={styles.inputFields}>
+                <label htmlFor="username">Username</label>
+                <input type="text" name='username' />
+              </div>
+              <br />
+              <div className={styles.inputFields}>
+                <label htmlFor="password">Password</label>
+                <input type="password" name='password' />
+              </div>
+            </form>
           </div>
           
         </div>

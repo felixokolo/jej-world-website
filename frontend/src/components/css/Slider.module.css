@@ -39,8 +39,14 @@
   width: 20em;
 }
 
+.details p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .price {
   margin-right: 0;
+  margin-left: auto;
   float: right;
 }
 
