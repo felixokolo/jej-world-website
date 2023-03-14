@@ -1,10 +1,66 @@
+$base-color1: #2F61A8;
+$base-color2: #990099;
+$base-color3: #ffd0ff;
+
+.mainBody {
+  padding: 2vw;
+  background: $base-color3;
+}
+
+
+.logo {
+  width: 100%;
+}
+
 .head {
-  height: 5vh;
+  display: grid;
+  grid-template-columns: 20% 70% 10%;
+
+  div {
+    display: flex;
+    border: .1em solid $base-color1;
+    width: 80%;
+    height: 50%;
+    padding: 1%;
+    margin-left: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 1em;
+
+    input {
+      display: block;
+      width: 80%;
+      height: 100%;
+      outline: none;
+      border: none;
+      font-size: large;
+      font-style: italic;
+      background: $base-color3;
+    }
+
+    img {
+      margin-top: auto;
+      margin-bottom: auto;
+      width: 2vw;
+      float: right;
+      margin-left: auto;
+      margin-right: 5%;
+    }
+  }
+
+  .cart {
+    width: 5vw;
+    margin: auto;
+
+  }
+
+
 }
 
 .hero {
   display: grid;
   grid-template-columns: auto auto auto;
+
   h2 {
     font-size: 2vw;
   }
@@ -21,9 +77,11 @@
 .inputFields {
   display: flex;
   width: 20%;
+
   label {
     float: left;
   }
+
   input {
     float: right;
     margin-left: auto;

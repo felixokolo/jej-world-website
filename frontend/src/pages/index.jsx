@@ -1,23 +1,23 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-import Product from '@/components/slide'
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import styles from "@/styles/Home.module.css";
+import Product from "@/components/slide";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const images = [
     {
-      url:'/images/orand.jpeg',
-      name: 'Akwa oche',
-      price: 'N 7,500'
+      url: "/images/orand.jpeg",
+      name: "Akwa oche",
+      price: "N 7,500",
     },
     {
-      url:'/images/silk.jpeg',
-      name: 'Silk',
-      price: 'N 9,500'
-    }
+      url: "/images/silk.jpeg",
+      name: "Silk",
+      price: "N 9,500",
+    },
   ];
   return (
     <>
@@ -27,18 +27,20 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className={styles.mainBody}>
         <div className={styles.head}>
-          <img src='/images/logo.png' alt='logo'></img>
-          <input placeholder='search'></input>
-          <img src='/images/search.png' alt='search'></img>
-          <img src='/images/cart.png' alt='cart'></img>
+          <img className={styles.logo} src="/images/logo.png" alt="logo"></img>
+          <div>
+            <input placeholder="search"></input>
+            <img src="/images/search.png" alt="search"></img>
+          </div>
+          <img className={styles.cart} src="/images/cart.png" alt="cart"></img>
         </div>
         <div className={styles.hero}>
-          <div className='categories'>
+          <div className="categories">
             <h2>Categories</h2>
           </div>
-          <div className='recent'>
+          <div className="recent">
             <h2>Recent</h2>
             <Product images={images}></Product>
           </div>
@@ -47,19 +49,17 @@ export default function Home() {
             <form>
               <div className={styles.inputFields}>
                 <label htmlFor="username">Username</label>
-                <input type="text" name='username' />
+                <input type="text" name="username" />
               </div>
               <br />
               <div className={styles.inputFields}>
                 <label htmlFor="password">Password</label>
-                <input type="password" name='password' />
+                <input type="password" name="password" />
               </div>
             </form>
           </div>
-          
         </div>
-        
       </main>
     </>
-  )
+  );
 }

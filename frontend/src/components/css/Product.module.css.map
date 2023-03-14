@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACP,UAAU,EAAE,GAAG;CAKhB;;AAND,AAEE,QAFM,CAEN,GAAG,CAAC;EACF,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,GAAG;CACZ",
-    "sources": [
-        "Product.module.scss"
-    ],
-    "names": [],
-    "file": "Product.module.css"
-}
+{"version":3,"sources":["Product.module.scss","Product.module.css"],"names":[],"mappings":"AAAA;EACE,eAAA;ACCF;ADAE;EACE,UAAA;EACA,WAAA;ACEJ","file":"Product.module.css"}

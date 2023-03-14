@@ -1,14 +1,54 @@
+.mainBody {
+  padding: 2vw;
+  background: #ffd0ff;
+}
+
+.logo {
+  width: 100%;
+}
+
 .head {
-  height: 5vh;
+  display: grid;
+  grid-template-columns: 20% 70% 10%;
+}
+.head div {
+  display: flex;
+  border: 0.1em solid #2F61A8;
+  width: 80%;
+  height: 50%;
+  padding: 1%;
+  margin-left: 5%;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 1em;
+}
+.head div input {
+  display: block;
+  width: 80%;
+  height: 100%;
+  outline: none;
+  border: none;
+  font-size: large;
+  font-style: italic;
+  background: #ffd0ff;
+}
+.head div img {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 2vw;
+  float: right;
+  margin-left: auto;
+  margin-right: 5%;
+}
+.head .cart {
+  width: 5vw;
+  margin: auto;
 }
 
 .hero {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto;
 }
-
 .hero h2 {
   font-size: 2vw;
 }
@@ -16,25 +56,19 @@
 .login {
   display: block;
 }
-
 .login form {
   display: block;
 }
 
 .inputFields {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 20%;
 }
-
 .inputFields label {
   float: left;
 }
-
 .inputFields input {
   float: right;
   margin-left: auto;
   margin-right: 0;
-}
-/*# sourceMappingURL=Home.module.css.map */
+}/*# sourceMappingURL=Home.module.css.map */
