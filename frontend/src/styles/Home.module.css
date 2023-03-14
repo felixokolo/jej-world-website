@@ -2,7 +2,7 @@
 .mainBody {
   padding: 2vw;
   font-family: 'Poppins';
-  background: #dbeaff;
+  background: #f6f6f6;
 }
 
 .mainBody h2 {
@@ -42,7 +42,7 @@
   border: none;
   font-size: large;
   font-style: italic;
-  background: #dbeaff;
+  background: #f6f6f6;
 }
 
 .head div img {
