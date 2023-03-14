@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+$base-color1: #2F61A8;
+$base-color2: #990099;
+$base-color3: #ffd0ff;
+
+
+
+.productsArea {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  column-gap: 1em;
+  row-gap: 1em;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}

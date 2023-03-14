@@ -1,7 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 .product {
-  background: red;
+  background: none;
+  border: 0.1em solid #2F61A8;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 10%;
+  border-radius: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5%;
+  font-size: 70%;
 }
+
 .product img {
-  width: 5em;
-  height: 5em;
-}/*# sourceMappingURL=Product.module.css.map */
+  display: block;
+  width: 150px;
+  height: 150px;
+  aspect-ratio: 1 / 1;
+  border-radius: 2em;
+  margin-top: 5%;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Poppins';
+}
+
+.product .price {
+  color: #2F61A8;
+  float: right;
+  margin-left: auto;
+  margin-right: 10%;
+}
+
+.product .name {
+  color: #990099;
+  margin-left: 10%;
+}
+/*# sourceMappingURL=Product.module.css.map */

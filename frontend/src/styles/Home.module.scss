@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 $base-color1: #2F61A8;
 $base-color2: #990099;
-$base-color3: #ffd0ff;
+$base-color3: #dbeaff;
 
 .mainBody {
   padding: 2vw;
+  font-family: 'Poppins';
   background: $base-color3;
+  h2 {
+    color: $base-color1;
+  }
 }
 
 
@@ -36,7 +42,7 @@ $base-color3: #ffd0ff;
       font-size: large;
       font-style: italic;
       background: $base-color3;
-    }
+}
 
     img {
       margin-top: auto;
@@ -59,7 +65,9 @@ $base-color3: #ffd0ff;
 
 .hero {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-areas: 'cat rec log'
+                        'cat pro log';
 
   h2 {
     font-size: 2vw;
@@ -68,6 +76,7 @@ $base-color3: #ffd0ff;
 
 .login {
   display: block;
+  grid-area: log;
 
   form {
     display: block;
@@ -75,16 +84,18 @@ $base-color3: #ffd0ff;
 }
 
 .inputFields {
-  display: flex;
-  width: 20%;
-
-  label {
-    float: left;
-  }
+  display: block;
 
   input {
-    float: right;
-    margin-left: auto;
-    margin-right: 0;
+    width: 100%;
   }
+}
+
+.products {
+  grid-area: pro;
+}
+
+.slider {
+  margin-left: auto;
+  margin-right: auto;
 }

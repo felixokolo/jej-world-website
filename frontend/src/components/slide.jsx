@@ -12,7 +12,7 @@ const Slider = ({ images }) => {
     }, 2500);
   });
   return (
-    <div>
+    <div className={styles.completePackage}>
       <div className={styles.sliderContainer}>
         <Image
           src={images[index].url}

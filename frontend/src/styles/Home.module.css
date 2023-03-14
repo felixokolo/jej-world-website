@@ -1,6 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 .mainBody {
   padding: 2vw;
-  background: #ffd0ff;
+  font-family: 'Poppins';
+  background: #dbeaff;
+}
+
+.mainBody h2 {
+  color: #2F61A8;
 }
 
 .logo {
@@ -8,10 +14,15 @@
 }
 
 .head {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 20% 70% 10%;
+  -ms-grid-columns: 20% 70% 10%;
+      grid-template-columns: 20% 70% 10%;
 }
+
 .head div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border: 0.1em solid #2F61A8;
   width: 80%;
@@ -22,6 +33,7 @@
   margin-bottom: auto;
   border-radius: 1em;
 }
+
 .head div input {
   display: block;
   width: 80%;
@@ -30,8 +42,9 @@
   border: none;
   font-size: large;
   font-style: italic;
-  background: #ffd0ff;
+  background: #dbeaff;
 }
+
 .head div img {
   margin-top: auto;
   margin-bottom: auto;
@@ -40,35 +53,52 @@
   margin-left: auto;
   margin-right: 5%;
 }
+
 .head .cart {
   width: 5vw;
   margin: auto;
 }
 
 .hero {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: auto auto auto;
+  -ms-grid-columns: 20% 60% 20%;
+      grid-template-columns: 20% 60% 20%;
+      grid-template-areas: 'cat rec log' 'cat pro log';
 }
+
 .hero h2 {
   font-size: 2vw;
 }
 
 .login {
   display: block;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: log;
 }
+
 .login form {
   display: block;
 }
 
 .inputFields {
-  display: flex;
-  width: 20%;
+  display: block;
 }
-.inputFields label {
-  float: left;
-}
+
 .inputFields input {
-  float: right;
+  width: 100%;
+}
+
+.products {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: pro;
+}
+
+.slider {
   margin-left: auto;
-  margin-right: 0;
-}/*# sourceMappingURL=Home.module.css.map */
+  margin-right: auto;
+}
+/*# sourceMappingURL=Home.module.css.map */
