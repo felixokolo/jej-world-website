@@ -2,12 +2,12 @@
 
 $base-color1: #2F61A8;
 $base-color2: #990099;
-$base-color3: #f6f6f6;
-
+$base-color3: #ffffff;
+$base-color4: #a3c9fd;
 .mainBody {
   padding: 2vw;
   font-family: 'Poppins';
-  background: $base-color3;
+  //background: linear-gradient($base-color3, $base-color4, $base-color1);
   h2 {
     color: $base-color1;
   }

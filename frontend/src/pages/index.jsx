@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Product from "@/components/slide";
 import ProductList from "@/components/productList";
+import CategoryList from "@/components/categoryList";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,35 @@ export default function Home() {
       price: "N 9,500",
     },
   ];
+
+  const categories = [
+    {
+      id: 1,
+      logoURL: "/images/categories/fabrics.png",
+      name: "Fabrics"
+    },
+    {
+      id: 2,
+      logoURL: "/images/categories/hats.png",
+      name: "Hats"
+    },
+    {
+      id: 3,
+      logoURL: "/images/categories/clothes.png",
+      name: "Clothes"
+    },
+    {
+      id: 4,
+      logoURL: "/images/categories/hairs.png",
+      name: "Hairs"
+    },
+    {
+      id: 5,
+      logoURL: "/images/categories/shoes.png",
+      name: "Shoes"
+    },
+    
+  ]
 
   const items = {
     category: "Fabrics",
@@ -144,6 +174,7 @@ export default function Home() {
         <div className={styles.hero}>
           <div className="categories">
             <h2>Categories</h2>
+            <CategoryList items={categories}/>
           </div>
           <div className="recent">
             <h2>Recent</h2>

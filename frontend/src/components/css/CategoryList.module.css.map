@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAC,iFAAI",
+    "sources": [
+        "CategoryList.module.scss"
+    ],
+    "names": [],
+    "file": "CategoryList.module.css"
+}

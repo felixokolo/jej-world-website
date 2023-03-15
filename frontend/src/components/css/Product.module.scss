@@ -3,10 +3,11 @@
 $base-color1: #2F61A8;
 $base-color2: #990099;
 $base-color3: #ffd0ff;
+$image-width: 150px;
 
 .product {
   background: none;
-  border: .1em solid $base-color1;
+  //border: .1em solid $base-color1;
   width: fit-content;
   height: fit-content;
   margin-bottom: 10%;
@@ -17,14 +18,15 @@ $base-color3: #ffd0ff;
   font-size: 70%;
   img {
     display: block;
-    width: 150px;
-    height: 150px;
+    width: $image-width;
+    height: $image-width;
     aspect-ratio: 1 / 1;
     border-radius: 2em;
     margin-top: 5%;
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
+    border: 3px solid $base-color1;
 }
 
 div {
