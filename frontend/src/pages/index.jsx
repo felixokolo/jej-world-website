@@ -5,10 +5,16 @@ import styles from "@/styles/Home.module.css";
 import Product from "@/components/slide";
 import ProductList from "@/components/productList";
 import CategoryList from "@/components/categoryList";
+import { useRouter } from "next/router";
+import Header from "@/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
+
+
+
 export default function Home() {
+  const router = useRouter();
   const images = [
     {
       url: "/images/orand.jpeg",
@@ -154,6 +160,14 @@ export default function Home() {
   ]
 }
 
+function login (){
+  
+  
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+  router.push("/cpanel");
+}
+
   return (
     <>
       <Head>
@@ -163,14 +177,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.mainBody}>
-        <div className={styles.head}>
-          <img className={styles.logo} src="/images/logo.png" alt="logo"></img>
-          <div>
-            <input placeholder="search"></input>
-            <img src="/images/search.png" alt="search"></img>
-          </div>
-          <img className={styles.cart} src="/images/cart.png" alt="cart"></img>
-        </div>
+        <Header></Header>
         <div className={styles.hero}>
           <div className="categories">
             <h2>Categories</h2>
@@ -184,17 +191,17 @@ export default function Home() {
           </div>
           <div className={styles.login}>
             <h2>Login</h2>
-            <form>
               <div className={styles.inputFields}>
                 <label htmlFor="username">Username</label>
-                <input type="text" name="username" />
+                <input id="username" type="text" name="username" />
               </div>
               <br />
               <div className={styles.inputFields}>
                 <label htmlFor="password">Password</label>
-                <input type="password" name="password" />
+                <input id="password" type="password" name="password" />
               </div>
-            </form>
+              <br />
+              <button onClick={login}>Login</button>
           </div>
           <div className={styles.products}>
             <ProductList items={items}></ProductList>

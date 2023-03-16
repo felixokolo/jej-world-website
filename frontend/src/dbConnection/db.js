@@ -1,28 +1,26 @@
 const { MongoClient } = require('mongodb');
-// or as an es module:
-// import { MongoClient } from 'mongodb'
 
-// Connection URL
-const url = 'mongodb://localhost:27017';
-const client = new MongoClient(url);
+class dbClient {
 
-// Database Name
-const dbName = 'jej-world';
+  constructor(host, port, dbName) {
+    const url = `mongodb://${host}:${port}`;
+    this.client = new MongoClient(url);
+    this.dbName = dbName;
+  }
 
-async function main() {
-  // Use connect method to connect to the server
-  await client.connect();
-  console.log('Connected successfully to db server');
-  const db = client.db(dbName);
-  const collection = db.collection('categories');
+  connect = async () => {
+    this.client.connect().then(() => {
+      console.log('Connected successfully to db server');
+      this.db = this.client.db(this.dbName);
+  }).catch((error) => {
+      console.log(error.message);
+      this.db = false;
+    }
+  );
+  } 
 
-  // the following code examples can be pasted here...
-
-  return 'done.';
 }
 
-main()
-  .then(console.log)
-  .catch(console.error);
 
-export default client;
+
+export default dbClient;

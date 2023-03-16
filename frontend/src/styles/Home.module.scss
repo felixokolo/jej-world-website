@@ -14,54 +14,8 @@ $base-color4: #a3c9fd;
 }
 
 
-.logo {
-  width: 100%;
-}
-
-.head {
-  display: grid;
-  grid-template-columns: 20% 70% 10%;
-
-  div {
-    display: flex;
-    border: .1em solid $base-color1;
-    width: 80%;
-    height: 50%;
-    padding: 1%;
-    margin-left: 5%;
-    margin-top: auto;
-    margin-bottom: auto;
-    border-radius: 1em;
-
-    input {
-      display: block;
-      width: 80%;
-      height: 100%;
-      outline: none;
-      border: none;
-      font-size: large;
-      font-style: italic;
-      background: $base-color3;
-}
-
-    img {
-      margin-top: auto;
-      margin-bottom: auto;
-      width: 2vw;
-      float: right;
-      margin-left: auto;
-      margin-right: 5%;
-    }
-  }
-
-  .cart {
-    width: 5vw;
-    margin: auto;
-
-  }
 
 
-}
 
 .hero {
   display: grid;
