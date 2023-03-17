@@ -11,7 +11,7 @@ const ProductList = ({ items }) => {
             <div className={styles.productsArea}>
             {
             items.products.map((item) => {
-              return <Item key={item.id} item={item}/>
+              return <Item key={item.id} item={item} cpanel={items.cpanel}/>
             })}
             
             </div>

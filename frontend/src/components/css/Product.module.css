@@ -1,12 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 .product {
-  background: none;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  display: block;
+  width: 150px;
+  height: 150px;
   margin-bottom: 10%;
   border-radius: 10%;
   margin-left: auto;
@@ -17,10 +13,10 @@
 
 .product img {
   display: block;
-  width: 150px;
-  height: 150px;
   aspect-ratio: 1 / 1;
   border-radius: 2em;
+  width: 150px;
+  height: 150px;
   margin-top: 5%;
   margin-bottom: 0;
   margin-left: auto;
@@ -28,22 +24,43 @@
   border: 3px solid #2F61A8;
 }
 
-.product div {
+.product p {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.product .price {
+  color: #ffffff;
+  float: right;
+  margin-left: auto;
+  margin-right: 10%;
+  font-weight: bold;
+}
+
+.product .name {
+  color: #ffffff;
+  margin-left: 10%;
+}
+
+.product .details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-family: 'Poppins';
+  position: relative;
+  top: auto;
+  bottom: 0;
+  background: rgba(153, 0, 153, 0.7);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: .5em;
 }
 
-.product .price {
-  color: #2F61A8;
-  float: right;
-  margin-left: auto;
-  margin-right: 10%;
-}
-
-.product .name {
-  color: #990099;
-  margin-left: 10%;
+.product .checkbox {
+  margin-bottom: 5%;
 }
 /*# sourceMappingURL=Product.module.css.map */

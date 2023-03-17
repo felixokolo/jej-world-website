@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAC,iFAAI",
+    "sources": [
+        "AddPanel.module.scss"
+    ],
+    "names": [],
+    "file": "AddPanel.module.css"
+}

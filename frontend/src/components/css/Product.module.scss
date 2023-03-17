@@ -3,13 +3,14 @@
 $base-color1: #2F61A8;
 $base-color2: #990099;
 $base-color3: #ffd0ff;
+$price-color: #ffffff;
+$name-color: #ffffff;
 $image-width: 150px;
 
 .product {
-  background: none;
-  //border: .1em solid $base-color1;
-  width: fit-content;
-  height: fit-content;
+  display: block;
+  width: $image-width;
+  height: $image-width;
   margin-bottom: 10%;
   border-radius: 10%;
   margin-left: auto;
@@ -18,10 +19,11 @@ $image-width: 150px;
   font-size: 70%;
   img {
     display: block;
-    width: $image-width;
-    height: $image-width;
+    
     aspect-ratio: 1 / 1;
     border-radius: 2em;
+    width: $image-width;
+    height: $image-width;
     margin-top: 5%;
     margin-bottom: 0;
     margin-left: auto;
@@ -29,20 +31,35 @@ $image-width: 150px;
     border: 3px solid $base-color1;
 }
 
-div {
-  display: flex;
-  font-family: 'Poppins';
-  
+p {
+  height: fit-content;
+  margin: 0;
+  font-size: 1.1em;
 }
+
 .price {
-  color: $base-color1;
+  color: $price-color;
   float: right;
   margin-left: auto;
   margin-right: 10%;
+  font-weight: bold;
 }
 
 .name {
-  color: $base-color2;
+  color: $name-color;
   margin-left: 10%;
+}
+.details {
+  display: flex;
+  font-family: 'Poppins';
+  position: relative;
+  top: auto;
+  bottom: 0;
+  background: rgba(153, 0, 153, .7);
+  height: fit-content;
+  border-radius: .5em;
+}
+.checkbox {
+  margin-bottom: 5%;
 }
 }
