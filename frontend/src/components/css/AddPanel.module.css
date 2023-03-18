@@ -1,2 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-/*# sourceMappingURL=AddPanel.module.css.map */
+.form {
+  display: block;
+  background: rgba(153, 0, 153, 0.185);
+  padding: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.form form {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.form .container {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.form br {
+  margin-top: 1%;
+}
+.form input {
+  margin-bottom: 1%;
+}
+.form .input_area {
+  border: 0.2em solid #2F61A8;
+  border-radius: 0.5em;
+}/*# sourceMappingURL=AddPanel.module.css.map */

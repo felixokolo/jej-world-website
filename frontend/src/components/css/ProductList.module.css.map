@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,OAAO,CAAC,iFAAI;AAQZ,AAAA,aAAa,CAAC;EACZ,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,oCAAoC;EAC3D,UAAU,EAAE,GAAG;EACf,OAAO,EAAE,GAAG;EACZ,WAAW,EAAE,MAAM;EACnB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;CACb",
-    "sources": [
-        "ProductList.module.scss"
-    ],
-    "names": [],
-    "file": "ProductList.module.css"
-}
+{"version":3,"sources":["ProductList.module.scss","ProductList.module.css"],"names":[],"mappings":"AAAQ,yFAAA;AASR;EACE,aAAA;EACA,2DAAA;EACA,oBAAA;OAAA,eAAA;EACA,YAAA;EACA,mBAAA;EACA,WAAA;EACA,YAAA;ACPF","file":"ProductList.module.css"}

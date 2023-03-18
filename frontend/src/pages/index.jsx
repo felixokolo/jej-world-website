@@ -10,9 +10,6 @@ import Header from "@/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
-
-
-
 export default function Home() {
   const router = useRouter();
   const images = [
@@ -32,141 +29,169 @@ export default function Home() {
     {
       id: 1,
       logoURL: "/images/categories/fabrics.png",
-      name: "Fabrics"
+      name: "Fabrics",
     },
     {
       id: 2,
       logoURL: "/images/categories/hats.png",
-      name: "Hats"
+      name: "Hats",
     },
     {
       id: 3,
       logoURL: "/images/categories/clothes.png",
-      name: "Clothes"
+      name: "Clothes",
     },
     {
       id: 4,
       logoURL: "/images/categories/hairs.png",
-      name: "Hairs"
+      name: "Hairs",
     },
     {
       id: 5,
       logoURL: "/images/categories/shoes.png",
-      name: "Shoes"
+      name: "Shoes",
     },
-    
-  ]
+  ];
 
   const items = {
     category: "Fabrics",
     products: [
-    {
-      id: 1,
-      url: "/images/products/1.jpeg",
-      name: "Plain Silk",
-      price: 'N 7,500',
-    },
-    {
-      id: 2,
-      url: "/images/products/2.jpeg",
-      name: "Plain Silk",
-      price: 'N 7,500',
-    },
-    {
-      id: 3,
-      url: "/images/products/3.jpeg",
-      name: "Plain Silk",
-      price: 'N 7,500',
-    },
-    {
-      id: 4,
-      url: "/images/products/4.jpeg",
-      name: "Plain Silk",
-      price: 'N 7,500',
-    },
-    {
-      id: 5,
-      url: "/images/products/5.jpeg",
-      name: "Plain Silk",
-      price: 'N 7,500',
-    },
-    {
-      id: 6,
-      url: "/images/products/6.jpeg",
-      name: "Plain Silk",
-      price: 'N 7,500',
-    },
-    {
-      id: 7,
-      url: "/images/products/7.jpeg",
-      name: "Plain Silk",
-      price: 'N 7,500',
-    },
-    {
-      id: 8,
-      url: "/images/products/8.jpeg",
-      name: "Plain Silk",
-      price: 'N 7,500',
-    },
-    {
-      id: 9,
-      url: "/images/products/9.jpeg",
-      name: "Plain Silk",
-      price: 'N 7,500',
-    },
-    {
-      id: 10,
-      url: "/images/products/10.jpeg",
-      name: "Plain Silk",
-      price: 'N 7,500',
-    },
-    {
-      id: 11,
-      url: "/images/products/11.jpeg",
-      name: "Plain Silk",
-      price: 'N 7,500',
-    },
-    {
-      id: 12,
-      url: "/images/products/12.jpeg",
-      name: "Plain Silk",
-      price: 'N 7,500',
-    },
-    {
-      id: 13,
-      url: "/images/products/13.jpeg",
-      name: "Plain Silk",
-      price: 'N 7,500',
-    },
-    {
-      id: 14,
-      url: "/images/products/14.jpeg",
-      name: "Plain Silk",
-      price: 'N 7,500',
-    },
-    {
-      id: 15,
-      url: "/images/products/15.jpeg",
-      name: "Plain Silk",
-      price: 'N 7,500',
-    },
-    {
-      id: 16,
-      url: "/images/products/16.jpeg",
-      name: "Plain Silk",
-      price: 'N 7,500',
-    },
-    
-  ]
-}
+      {
+        id: 1,
+        url: "/images/products/1.jpeg",
+        name: "Plain Silk",
+        price: "N 7,500",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
+      {
+        id: 2,
+        url: "/images/products/2.jpeg",
+        name: "Plain Silk",
+        price: "N 7,500",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
+      {
+        id: 3,
+        url: "/images/products/3.jpeg",
+        name: "Plain Silk",
+        price: "N 7,500",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
+      {
+        id: 4,
+        url: "/images/products/4.jpeg",
+        name: "Plain Silk",
+        price: "N 7,500",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
+      {
+        id: 5,
+        url: "/images/products/5.jpeg",
+        name: "Plain Silk",
+        price: "N 7,500",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
+      {
+        id: 6,
+        url: "/images/products/6.jpeg",
+        name: "Plain Silk",
+        price: "N 7,500",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
+      {
+        id: 7,
+        url: "/images/products/7.jpeg",
+        name: "Plain Silk",
+        price: "N 7,500",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
+      {
+        id: 8,
+        url: "/images/products/8.jpeg",
+        name: "Plain Silk",
+        price: "N 7,500",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
+      {
+        id: 9,
+        url: "/images/products/9.jpeg",
+        name: "Plain Silk",
+        price: "N 7,500",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
+      {
+        id: 10,
+        url: "/images/products/10.jpeg",
+        name: "Plain Silk",
+        price: "N 7,500",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
+      {
+        id: 11,
+        url: "/images/products/11.jpeg",
+        name: "Plain Silk",
+        price: "N 7,500",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
+      {
+        id: 12,
+        url: "/images/products/12.jpeg",
+        name: "Plain Silk",
+        price: "N 7,500",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
+      {
+        id: 13,
+        url: "/images/products/13.jpeg",
+        name: "Plain Silk",
+        price: "N 7,500",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
+      {
+        id: 14,
+        url: "/images/products/14.jpeg",
+        name: "Plain Silk",
+        price: "N 7,500",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
+      {
+        id: 15,
+        url: "/images/products/15.jpeg",
+        name: "Plain Silk",
+        price: "N 7,500",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
+      {
+        id: 16,
+        url: "/images/products/16.jpeg",
+        name: "Plain Silk",
+        price: "N 7,500",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
+    ],
+  };
 
-function login (){
-  
-  
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
-  router.push("/cpanel");
-}
+  function login() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    router.push("/cpanel");
+  }
 
   return (
     <>
@@ -181,7 +206,7 @@ function login (){
         <div className={styles.hero}>
           <div className="categories">
             <h2>Categories</h2>
-            <CategoryList items={categories}/>
+            <CategoryList items={categories} />
           </div>
           <div className="recent">
             <h2>Recent</h2>
@@ -191,24 +216,22 @@ function login (){
           </div>
           <div className={styles.login}>
             <h2>Login</h2>
-              <div className={styles.inputFields}>
-                <label htmlFor="username">Username</label>
-                <input id="username" type="text" name="username" />
-              </div>
-              <br />
-              <div className={styles.inputFields}>
-                <label htmlFor="password">Password</label>
-                <input id="password" type="password" name="password" />
-              </div>
-              <br />
-              <button onClick={login}>Login</button>
+            <div className={styles.inputFields}>
+              <label htmlFor="username">Username</label>
+              <input id="username" type="text" name="username" />
+            </div>
+            <br />
+            <div className={styles.inputFields}>
+              <label htmlFor="password">Password</label>
+              <input id="password" type="password" name="password" />
+            </div>
+            <br />
+            <button onClick={login}>Login</button>
           </div>
           <div className={styles.products}>
-            <ProductList items={items}></ProductList>
+            <ProductList items={{ data: items }}></ProductList>
           </div>
-          
         </div>
-        
       </main>
     </>
   );

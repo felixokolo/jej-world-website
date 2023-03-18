@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+$base-color1: #2F61A8;
+$base-color2: #990099;
+$base-color3: #ffffff;
+$base-color4: #a3c9fd;
+
+.hero {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}

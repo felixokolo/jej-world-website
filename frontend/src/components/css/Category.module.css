@@ -1,17 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 .category {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 4vw auto;
-      grid-template-columns: 4vw auto;
+  grid-template-columns: 4vw auto;
 }
-
 .category img {
   width: 4vw;
   height: 4vw;
   border-radius: 5px;
 }
-
 .category p {
   display: block;
   margin-left: 10px;
@@ -22,11 +18,9 @@
 }
 
 .container {
-  background: -webkit-gradient(linear, left top, left bottom, from(#a3c9fd), to(#ffd0ff));
   background: linear-gradient(#a3c9fd, #ffd0ff);
   border-radius: 5px;
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 10%;
-}
-/*# sourceMappingURL=Category.module.css.map */
+}/*# sourceMappingURL=Category.module.css.map */

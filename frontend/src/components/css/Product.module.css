@@ -10,10 +10,9 @@
   padding: 5%;
   font-size: 70%;
 }
-
 .product img {
   display: block;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1/1;
   border-radius: 2em;
   width: 150px;
   height: 150px;
@@ -23,15 +22,12 @@
   margin-right: auto;
   border: 3px solid #2F61A8;
 }
-
 .product p {
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   margin: 0;
   font-size: 1.1em;
 }
-
 .product .price {
   color: #ffffff;
   float: right;
@@ -39,28 +35,21 @@
   margin-right: 10%;
   font-weight: bold;
 }
-
 .product .name {
   color: #ffffff;
   margin-left: 10%;
 }
-
 .product .details {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   position: relative;
   top: auto;
   bottom: 0;
   background: rgba(153, 0, 153, 0.7);
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  border-radius: .5em;
+  border-radius: 0.5em;
 }
-
 .product .checkbox {
   margin-bottom: 5%;
-}
-/*# sourceMappingURL=Product.module.css.map */
+}/*# sourceMappingURL=Product.module.css.map */

@@ -3,18 +3,30 @@ import Image from "next/image";
 import { useState } from "react";
 import styles from "./css/Product.module.css";
 
-const Item = ({ item, cpanel, }) => {
-  const check = cpanel ? <input className={styles.checkbox} type="checkbox" /> : null;
+const Item = ({ item, cpanel, setselected }) => {
+  const editSelected = (e) => {
+    const value = e.target.checked;
+    if (value) setselected("ADD", e.target.id);
+    else setselected("REMOVE", e.target.id);
+  };
+  const check = cpanel ? (
+    <input
+      className={styles.checkbox}
+      type="checkbox"
+      onChange={editSelected}
+      id={item.id}
+    />
+  ) : null;
   return (
     <div
-    className={styles.product}
-    style={
-      {
+      className={styles.product}
+      style={{
         backgroundImage: `url(${item.url})`,
         backgroundRepeat: "no-repeat",
-        backgroundSize: "cover"
-    }}>
-        {/* <Image
+        backgroundSize: "cover",
+      }}
+    >
+      {/* <Image
           src={item.url}
           alt="image"
           width={500}
