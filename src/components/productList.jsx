@@ -40,7 +40,7 @@ const ProductList = ({ items, setselected, selected }) => {
   
 
   const deleteProducts = async () => {
-    const resp = await fetch('http://localhost:3000/api/v1/hello', 
+    const resp = await fetch('https://jej-world-website.vercel.app/api/v1/hello', 
     {
       method: 'DELETE',
       headers: {

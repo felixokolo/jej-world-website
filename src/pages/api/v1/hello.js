@@ -32,7 +32,7 @@ export default async function handler(req, res) {
     resp = await client.db.collection('products').find({}).toArray()
   }
   resp[0].products.forEach((product) => {
-    product.url = `http://localhost:3000/api/v1/images/${product.id}`
+    product.url = `http://jej-world-website.vercel.app/api/v1/images/${product.id}`
     console.log(product);
   })
   return res.status(200).json(resp)

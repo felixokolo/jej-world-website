@@ -30,7 +30,7 @@ const CPanel = ({ data, cpanel }) => {
 export default CPanel;
 
 export async function getServerSideProps() {
-  const resp = await fetch("http://localhost:3000/api/v1/hello");
+  const resp = await fetch("https://jej-world-website.vercel.app/api/v1/hello");
   const data = await resp.json();
   return {
     props: {
