@@ -1,0 +1,30 @@
+.form {
+  display: block;
+  background: rgba(153, 0, 153, 0.185);
+  padding: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.form form {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.form .container {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.form br {
+  margin-top: 1%;
+}
+.form input {
+  margin-bottom: 1%;
+}
+.form .input_area {
+  border: 0.2em solid #2F61A8;
+  border-radius: 0.5em;
+}
+.form .preview {
+  width: 50%;
+}/*# sourceMappingURL=AddPanel.module.css.map */
