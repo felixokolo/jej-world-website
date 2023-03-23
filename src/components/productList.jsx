@@ -40,7 +40,7 @@ const ProductList = ({ items, setselected, selected }) => {
   
 
   const deleteProducts = async () => {
-    const resp = await fetch(`${process.env['BASE_URL']}/api/v1/hello`, 
+    const resp = await fetch(`/api/v1/dbedit`, 
     {
       method: 'DELETE',
       headers: {

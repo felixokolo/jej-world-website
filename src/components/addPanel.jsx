@@ -1,10 +1,6 @@
 import React, { Component, use } from "react";
-import Image from "next/image";
 import { useState } from "react";
 import styles from "./css/AddPanel.module.css";
-import Item from "./productItem";
-import { headers } from "../../next.config";
-import axios from "axios";
 import { useRouter } from "next/router";
 
 let state;
@@ -13,22 +9,23 @@ let state3
 
 const upload = async (e) => {
   e.preventDefault();
-  /* let resp = await fetch('/api/v1/images', 
-  {
-    method: 'POST',
-    body: e.target.image.files[0],
-  })
-  if (resp.status === 200) {
-    let res = await resp.json()
-    console.log(res)
+  const file = e.target.image.files[0];
+  const reader = new Promise(async (resolve, reject) => {
+    const fileReader =  new FileReader()
+    fileReader.readAsDataURL(file)
+    fileReader.onload = () => {
+      resolve(fileReader.result)
+    }
+    
+  }) 
+  const result = await reader
     const details = {
-      "id": res.key.split('.').pop(),
       "name": e.target.name.value,
       "price": e.target.price.value,
       "description": e.target.description.value,
-      "AWS": res
+      "image": result
     }
-    resp = await fetch('/api/v1/dbedit', {
+    const resp = await fetch('/api/v1/dbedit', {
       method: 'POST',
       body: JSON.stringify(details),
       headers: {
@@ -36,33 +33,10 @@ const upload = async (e) => {
       }
     })
     if (resp.status === 200) {
-      res = await resp.json()
+      const res = await resp.json()
       console.log(res)
-      //state3.reload(window.location.pathname)
+      state3.reload(window.location.pathname)
     }
-    
-  } */
-  
-  let formData = new FormData();
-  console.log('On upload');
-  const file = e.target.image.files[0];
-  formData.append("name", e.target.name.value);
-  formData.append("price", e.target.price.value);
-  formData.append("image", file);
-  formData.append("description", e.target.description.value);
-  formData.append("image", file);
-  formData.append("size", file.size);
-  console.log(file.size)
-  axios.post('/api/v1/images', formData, {
-    headers: {
-      'Content-Type': 'multipart/form-data'
-    }})
-    .then((res) => {
-      console.log(res)
-      if (res.status === 200) {
-        state3.reload(window.location.pathname)
-      }
-    });
 };
 
 

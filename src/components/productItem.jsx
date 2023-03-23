@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Image from "next/image";
-import { useState } from "react";
 import styles from "./css/Product.module.css";
 
 const Item = ({ item, cpanel, setselected }) => {
@@ -25,19 +24,8 @@ const Item = ({ item, cpanel, setselected }) => {
   return (
     <div
       className={styles.product}
-      style={{
-        backgroundImage: `url(${item.AWS.Location})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      }}
     >
-      {/* <Image
-          src={item.url}
-          alt="image"
-          width={500}
-          height={500}
-          placeholder
-        /> */}
+      <Image src={item.image} width={500} height={500} alt="image"></Image>
       {check}
       <div className={styles.details}>
         <p className={styles.name}>{item.name}</p>

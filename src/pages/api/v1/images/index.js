@@ -34,7 +34,7 @@ if (req.method === "POST") {
     return filename;
   }; 
   options.multiples = true;
-    const form = formidable(options);
+    const form = formidable();
     const formData = new Promise((resolve, reject) => {
       form.parse(req, async (err, fields, files) => {
         if (err) {
@@ -44,36 +44,8 @@ if (req.method === "POST") {
       });
     });
     const { fields, files } = await formData;
-    const new_filename = `${filename}.${files.image[0].originalFilename.split('.').pop()}`
-    const new_path = `${pathDir}\\${new_filename}`;
-    fs.rename(filePath, new_path, () => {
-      console.log(new_path)
-    });
-    console.log(files)
-  const stream = fs.createReadStream(new_path)
-  //console.log(tmpdir())
-  //fs.writeFileSync(filePath, stream)
-
-const upload = new Uploader({
-    // credentials to access AWS
-    accessKey: BUCKET_KEY,
-    secretKey: BUCKET_SECRET,
-    bucket: BUCKET_NAME,
-    objectName: new_filename,
-    stream: stream,
-    debug: true,
-  });
-  let formdata = new Promise((resolve, reject) => {
-    upload.send(async (err, dat) => {
-    if (err) {
-      console.error('Upload error' + err);
-    }
-    resolve({dat})
-  });
-  })
-   const { dat }= await formdata
-    res.status(200).json(dat)
-    console.log(dat)
+    console.log(fields)
+    
 }
 
 }
