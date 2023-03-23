@@ -1,3 +1,4 @@
+import dbClient from "@/dbConnection/db";
 import { v4 as uuid } from 'uuid';
 const dbName = 'jej-world';
 const client = new dbClient(dbName);
