@@ -17,11 +17,16 @@ const Item = ({ item, cpanel, setselected }) => {
       id={item.id}
     />
   ) : null;
+
+  const getObject = async () => {
+    
+  }
+
   return (
     <div
       className={styles.product}
       style={{
-        backgroundImage: `url(${item.url})`,
+        backgroundImage: `url(${item.AWS.Location})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}

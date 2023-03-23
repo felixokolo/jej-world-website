@@ -13,6 +13,36 @@ let state3
 
 const upload = async (e) => {
   e.preventDefault();
+  /* let resp = await fetch('/api/v1/images', 
+  {
+    method: 'POST',
+    body: e.target.image.files[0],
+  })
+  if (resp.status === 200) {
+    let res = await resp.json()
+    console.log(res)
+    const details = {
+      "id": res.key.split('.').pop(),
+      "name": e.target.name.value,
+      "price": e.target.price.value,
+      "description": e.target.description.value,
+      "AWS": res
+    }
+    resp = await fetch('/api/v1/dbedit', {
+      method: 'POST',
+      body: JSON.stringify(details),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    if (resp.status === 200) {
+      res = await resp.json()
+      console.log(res)
+      //state3.reload(window.location.pathname)
+    }
+    
+  } */
+  
   let formData = new FormData();
   console.log('On upload');
   const file = e.target.image.files[0];
@@ -21,8 +51,9 @@ const upload = async (e) => {
   formData.append("image", file);
   formData.append("description", e.target.description.value);
   formData.append("image", file);
+  formData.append("size", file.size);
   console.log(file.size)
-  axios.post('/api/v1/hello', formData, {
+  axios.post('/api/v1/images', formData, {
     headers: {
       'Content-Type': 'multipart/form-data'
     }})

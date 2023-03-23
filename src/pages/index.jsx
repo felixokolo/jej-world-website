@@ -243,7 +243,7 @@ export default function Home({ data, cpanel }) {
 
 export async function getServerSideProps() {
 
-  const resp =  await fetch('https://jej-world-website.vercel.app/api/v1/hello');
+  const resp =  await fetch(`${process.env['BASE_URL']}/api/v1/dbedit`);
   const data = await resp.json();
   
   return {
