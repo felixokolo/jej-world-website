@@ -7,7 +7,7 @@ const client = new dbClient(dbName);
 export default async function handler(req, res) {
   if (req.method === 'GET'){
   let resp = await client.db.collection(req.query.collection).find({}).toArray()
-  if (resp.length === 0) {
+  if (resp.length === 0 && req.query.collection === 'products') {
     await client.db.collection(req.query.collection).insertOne(
       {
         category: 'Fabrics',
