@@ -42,7 +42,7 @@ export async function getServerSideProps() {
   return {
     props: {
       data: data1.length === 0 ? null : data1[0],
-      orders: data2.length === 0 ? null : data2,
+      orders: data2.length === 0 ? [] : data2,
       cpanel: true,
     },
   };

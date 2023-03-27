@@ -10,10 +10,12 @@ import Order from "./orderItem";
 
 
 const Orderlist = ({ items }) => {
-  
+  let requests
+  if (items.length === 0) requests = <p>No requests at the moment</p>
+  else requests = items.map((ele) => <Order key={ele.id} item={ele}></Order>)
   return (
     <div className={styles.container}>
-      {items.map((ele) => <Order key={ele.id} item={ele}></Order>)}
+      {requests}
     </div>
   )
 
