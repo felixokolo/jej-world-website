@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+.container {
+  background: #ffd0ff;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2%;
+  border: 0.5em solid #2F61A8;
+  border-radius: 1em;
+}
+.container h3 {
+  color: #2F61A8;
+}
+.container h4 {
+  color: #990099;
+}
+.container li {
+  color: rgb(54, 35, 35);
+  font-weight: bold;
+}/*# sourceMappingURL=Order.module.css.map */

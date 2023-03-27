@@ -25,7 +25,7 @@ const upload = async (e) => {
       "description": e.target.description.value,
       "image": result
     }
-    const resp = await fetch('/api/v1/dbedit', {
+    const resp = await fetch(`/api/v1/dbedit?${new URLSearchParams({collection: "products"})}`, {
       method: 'POST',
       body: JSON.stringify(details),
       headers: {

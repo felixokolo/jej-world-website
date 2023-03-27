@@ -7,7 +7,7 @@
   display: grid;
   grid-template-columns: 20% 70% 10%;
 }
-.head div {
+.head .search {
   display: flex;
   border: 0.1em solid #2F61A8;
   width: 80%;
@@ -18,7 +18,7 @@
   margin-bottom: auto;
   border-radius: 1em;
 }
-.head div input {
+.head .search input {
   display: block;
   width: 80%;
   height: 100%;
@@ -28,7 +28,7 @@
   font-style: italic;
   background: #ffd0ff;
 }
-.head div img {
+.head .search img {
   margin-top: auto;
   margin-bottom: auto;
   width: 2vw;
@@ -37,6 +37,21 @@
   margin-right: 5%;
 }
 .head .cart {
+  display: flex;
+  width: 50%;
+}
+.head .cart small {
+  color: white;
+  margin-left: auto;
+  float: right;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 150%;
+  background: #990099;
+  border-radius: 1000%;
+  padding: 10%;
+}
+.head .cart img {
   width: 5vw;
   margin: auto;
 }/*# sourceMappingURL=Header.module.css.map */

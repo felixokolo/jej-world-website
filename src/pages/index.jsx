@@ -6,11 +6,26 @@ import ProductList from "@/components/productList";
 import CategoryList from "@/components/categoryList";
 import { useRouter } from "next/router";
 import Header from "@/components/header";
+import { useEffect, useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ data, cpanel }) {
   const router = useRouter();
+  const [cartNum, setcartNum] = useState(6);
+  const [selected, setSelected] = useState({})
+
+  const setcart = (item) => {
+    setSelected({...selected, [item]: 1});
+    
+  }
+
+  useEffect(() => {
+    console.log(selected)
+    setcartNum(Object.keys(selected).length)
+  }, [selected])
+
+
   const images = [
     {
       url: "/images/orand.jpeg",
@@ -70,7 +85,7 @@ export default function Home({ data, cpanel }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.mainBody}>
-        <Header></Header>
+        <Header cartNum={cartNum} selected={selected}></Header>
         <div className={styles.hero}>
           <div className="categories">
             <h2>Categories</h2>
@@ -97,7 +112,7 @@ export default function Home({ data, cpanel }) {
             <button onClick={login}>Login</button>
           </div>
           <div className={styles.products}>
-            <ProductList items={{ data, cpanel }}></ProductList>
+            <ProductList items={{ data, cpanel }} setcart={setcart}></ProductList>
           </div>
         </div>
       </main>
@@ -108,7 +123,7 @@ export default function Home({ data, cpanel }) {
 
 export async function getServerSideProps() {
 
-  const resp =  await fetch(`${process.env['BASE_URL']}/api/v1/dbedit`);
+  const resp =  await fetch(`${process.env['BASE_URL']}/api/v1/dbedit?${new URLSearchParams({collection: "products"})}`);
   const data = await resp.json();
   
   return {
@@ -117,4 +132,5 @@ export async function getServerSideProps() {
       cpanel: false,
     },
   };
+
 }

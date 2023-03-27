@@ -2,9 +2,9 @@
 .productsArea {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  -moz-column-gap: 1em;
-       column-gap: 1em;
-  row-gap: 1em;
+  -moz-column-gap: 5%;
+       column-gap: 5%;
+  row-gap: 30%;
   align-items: center;
   width: 100%;
   height: 100%;

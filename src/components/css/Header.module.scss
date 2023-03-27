@@ -14,7 +14,7 @@ $image-width: 4vw;
   display: grid;
   grid-template-columns: 20% 70% 10%;
 
-  div {
+  .search {
     display: flex;
     border: .1em solid $base-color1;
     width: 80%;
@@ -47,8 +47,24 @@ $image-width: 4vw;
   }
 
   .cart {
-    width: 5vw;
-    margin: auto;
+    display: flex;
+    width: 50%;
+    small {
+      color: white;
+      margin-left: auto;
+      float: right;
+      margin-top: auto;
+      margin-bottom: auto;
+      font-size: 150%;
+      background: $base-color2;
+      border-radius: 1000%;
+      padding: 10%;
+    }
+
+    img {
+      width: 5vw;
+      margin: auto;
+    }
 
   }
 

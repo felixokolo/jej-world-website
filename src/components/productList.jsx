@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 
 
 
-const ProductList = ({ items, setselected, selected }) => {
+const ProductList = ({ items, setselected, selected, setcart }) => {
   const [deleteButton, setdeleteButton] = useState(null);
   const router = useRouter()
   const category = items.data === null ? null : items.data.category
@@ -40,14 +40,14 @@ const ProductList = ({ items, setselected, selected }) => {
   
 
   const deleteProducts = async () => {
-    const resp = await fetch(`/api/v1/dbedit`, 
+    const resp = await fetch(`/api/v1/dbedit?${new URLSearchParams({collection: "products"})}`, 
     {
       method: 'DELETE',
       headers: {
         "Content-Type": "application/json",
         // 'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: JSON.stringify({selected,})
+      body: JSON.stringify({selected, collection: 'products'})
     })
     if (resp.status === 200) {
       router.reload(window.location.pathname)
@@ -67,6 +67,7 @@ const ProductList = ({ items, setselected, selected }) => {
           return (
             <Item
               setselected={editSelected}
+              setcart={setcart}
               key={item.id}
               item={item}
               cpanel={items.cpanel}

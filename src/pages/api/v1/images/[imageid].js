@@ -12,8 +12,9 @@ async function handler (req, res) {
 
   if (req.method === 'GET') {
     const { imageid } = req.query
-    const resp = await client.db.collection('products').findOne({category: "Fabrics"})
-    const result = resp.products.filter((value, index) => {
+    const resp = await client.db.collection('images').findOne({id: imageid})
+    return res.send(resp.image)
+    /* const result = resp.products.filter((value, index) => {
       return value.id === imageid
     }).pop()
     console.log(result)
@@ -25,7 +26,7 @@ async function handler (req, res) {
     }
     catch (err) {
       return res.status(404).send({ error: 'Not found' });
-    }
+    } */
   }
 }
 

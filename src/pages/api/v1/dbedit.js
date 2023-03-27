@@ -6,41 +6,53 @@ const client = new dbClient(dbName);
 
 export default async function handler(req, res) {
   if (req.method === 'GET'){
-  let resp = await client.db.collection('products').find({}).toArray()
+  let resp = await client.db.collection(req.query.collection).find({}).toArray()
   if (resp.length === 0) {
-    await client.db.collection('products').insertOne(
+    await client.db.collection(req.query.collection).insertOne(
       {
         category: 'Fabrics',
-        products: []
+        [req.query.collection]: []
       }
     )
-    resp = await client.db.collection('products').find({}).toArray()
+    resp = await client.db.collection(req.query.collection).find({}).toArray()
   }
   return res.status(200).json(resp)
 }
 
   if (req.method === "POST") {
-    console.log(req.body)
-    const details = {...req.body, id: uuid()}
-    const resp = await client.db.collection('products').updateOne(
+    if (req.query.collection === 'products')
+    {
+      const id = uuid();
+      const details = {...req.body, id, image: `/api/v1/images/${id}`}
+      let resp = await client.db.collection(req.query.collection).updateOne(
       {"category": "Fabrics"},
-      { $push: { "products": details } }
+      { $push: { [req.query.collection]: details } }
     )
+    resp = await client.db.collection('images').insertOne({id, image: req.body.image})
     res.status(200).json(resp)
   }
 
+  if (req.query.collection === "orders") {
+    const details = {...req.body, id: uuid()}
+      const resp = await client.db.collection(req.query.collection).insertOne(details)
+    res.status(200).json(resp)
+  }
+  }
+
   if (req.method === 'DELETE') {
-    console.log("in Delete")
-    let resp = await client.db.collection('products').find({}).toArray()
+    let resp = await client.db.collection(req.query.collection).find({}).toArray()
     const filtered = resp[0].products.filter((ele) => {
       return req.body.selected.includes(ele.id)
     })
-    resp = await client.db.collection('products').updateOne(
+    resp = await client.db.collection(req.query.collection).updateOne(
       {"category": "Fabrics"},
-      { $pull: { "products": {"id": { $in: req.body.selected}} } }
+      { $pull: { [req.query.collection]: {"id": { $in: req.body.selected}} } }
+    )
+
+    resp = await client.db.collection("images").deleteMany(
+      {"id": { $in: req.body.selected}}
     )
     res.status(200).json(resp)
-    console.log(fields);
   }
   
   }

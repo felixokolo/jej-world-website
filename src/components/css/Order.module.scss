@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+$base-color1: #2F61A8;
+$base-color2: #990099;
+$base-color3: #ffd0ff;
+$price-color: #ffffff;
+$name-color: #ffffff;
+$image-width: 150px;
+
+.container {
+  background: $base-color3;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2%;
+  border: .5em solid $base-color1;
+  border-radius: 1em;
+  
+
+  h3 {
+    color: $base-color1;
+  }
+  h4 {
+    color: $base-color2;
+  }
+  li {
+    color: rgb(54, 35, 35);
+    font-weight: bold;
+  }
+}
