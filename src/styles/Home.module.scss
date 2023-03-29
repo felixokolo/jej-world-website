@@ -2,7 +2,7 @@
 
 $base-color1: #2F61A8;
 $base-color2: #990099;
-$base-color3: #ffffff;
+$base-color3: #9900994f;
 $base-color4: #a3c9fd;
 .mainBody {
   padding: 2vw;
@@ -34,6 +34,34 @@ $base-color4: #a3c9fd;
 
   form {
     display: block;
+  }
+
+  input {
+    height: 3em;
+    outline: none;
+    outline: .2em solid #2f61a86c;
+    border: none;
+    box-shadow: 5px 5px 5px #9900999c;
+    border-radius: 1em;
+  }
+
+  label {
+    color: #2F61A8;
+    font-weight: bold;
+    margin-bottom: 7em;
+  }
+
+  button {
+    width: 100%;
+    height: 2em;
+    background: $base-color3;
+    font-size: large;
+    font-weight: bold;
+    border: none;
+    border-radius: 1em;
+    outline: .1em solid $base-color1;
+    margin-top: 1em;
+    color: $base-color1;
   }
 }
 

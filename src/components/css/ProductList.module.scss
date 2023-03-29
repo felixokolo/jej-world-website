@@ -5,8 +5,6 @@ $base-color2: #990099;
 $base-color3: #ffd0ff;
 
 
-.products {}
-
 .productsArea {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));

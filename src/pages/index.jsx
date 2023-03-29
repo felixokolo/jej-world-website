@@ -98,7 +98,7 @@ export default function Home({ data, cpanel }) {
             </div>
           </div>
           <div className={styles.login}>
-            <h2>Login</h2>
+            <h2>Admin Login</h2>
             <div className={styles.inputFields}>
               <label htmlFor="username">Username</label>
               <input id="username" type="text" name="username" />
